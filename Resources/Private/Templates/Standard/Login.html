@@ -1,0 +1,20 @@
+<f:base />
+<f:form action="authenticate" method="post">
+            <fieldset>
+                <legend>Datos de usuario</legend>
+                <div class="row username">
+                    <label id="usernameLabel" for="username" class="placeholder"><span>Usuario</span></label>
+                    <f:form.textbox
+                            name="__authentication[TYPO3][FLOW3][Security][Authentication][Token][UsernamePassword][username]"
+                            tabindex="1" id="username"/>
+                </div>
+
+                <div class="row password">
+                    <label id="passwordLabel" for="password" class="placeholder"><span>Password</span></label>
+                    <f:form.password
+                            name="__authentication[TYPO3][FLOW3][Security][Authentication][Token][UsernamePassword][password]"
+                            tabindex="2" id="password"/>
+                </div>
+                <f:form.submit value="Login"/>
+            </fieldset>
+        </f:form>

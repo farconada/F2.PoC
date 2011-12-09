@@ -1,0 +1,17 @@
+
+F2\PoC\Service\Index\IndexManagerInterface:
+  className: 'F2\PoC\Service\Index\LuceneIndex'
+  scope: singleton
+
+F2\PoC\Service\Index\LuceneIndex:
+  arguments:
+    1:
+      setting: F2.PoC.LuceneDir
+
+F2\PoC\Service\Index\DoctrineEventListenerInterface:
+  className: 'F2\PoC\Service\Index\IndexerListener'
+  scope: singleton
+
+F2\PoC\Service\Index\IndexSearchInterface:
+  className: 'F2\PoC\Service\Index\LuceneIndex'
+  scope: singleton
