@@ -5,7 +5,7 @@ use \F2\PoC\Service\Index\IndexableModel;
 /**
  * @FLOW3\Scope("singleton")
  */
-class IndexerListener implements \F2\Base\Service\Index\DoctrineEventListenerInterface
+class IndexerListener implements \F2\PoC\Service\Index\DoctrineEventListenerInterface
 {
     /**
      * @var \F2\PoC\Service\Index\IndexManagerInterface

@@ -36,8 +36,6 @@ class StandardController extends AbstractController {
      * @param string $query
      */
     public function findAction($query) {
-        $preguntas = $this->indexSearch->find('F2\TuitLawyer\Domain\Model\Pregunta', $query);
-        $this->view->assign('preguntas', $preguntas);
     }
 
     public function loginAction() {
