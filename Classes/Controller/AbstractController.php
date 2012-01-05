@@ -30,12 +30,10 @@ abstract class AbstractController extends  \TYPO3\FLOW3\MVC\Controller\ActionCon
         parent::initializeAction();
 
         //Event listener para indexacion de objetos
-        $entityManagerFactory = $this->objectManager->get('\TYPO3\FLOW3\Persistence\Doctrine\EntityManagerFactory');
-        $entityManager = $entityManagerFactory->create();
+        $entityManager = $this->objectManager->get('Doctrine\Common\Persistence\ObjectManager');
         $entityManager->getEventManager()->addEventListener(
             array(\Doctrine\ORM\Events::postUpdate, \Doctrine\ORM\Events::postPersist, \Doctrine\ORM\Events::preRemove), $this->doctrineEventListener
         );
-        $this->persistenceManager->injectEntityManager($entityManager);
 
     }
 }
